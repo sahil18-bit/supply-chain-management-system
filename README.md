@@ -7,8 +7,6 @@ This refactor retains the project’s core: dynamically allocated linked-list ad
 - `findPlace` was defined twice, preventing compilation.
 - Menu condition `choice == 6` exited before optimal-route code could execute.
 - Input and route weights were insufficiently validated; negative Dijkstra weights could be inserted.
-- The fixed 50-place graph, raw global state, and no route IDs made deletion and restoration unreliable.
-- Location deletion left inbound routes dangling; this backend deletes all associated logical routes transactionally.
 
 ## Build and run
 
